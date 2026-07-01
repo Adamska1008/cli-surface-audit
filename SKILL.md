@@ -1,6 +1,6 @@
 ---
 name: cli-surface-audit
-description: Use principles for judging and improving CLI command surfaces for human usability, automation quality, and safe agent execution. Use when reviewing or redesigning CLI commands, overloaded flags, task flows, config models, help text, errors, output formats, dry-run behavior, destructive commands, shell completion, or agent-callable interfaces, especially when a CLI has become a parameter grab bag or may trigger real jobs, cloud resources, databases, deployments, billing, or other side effects.
+description: Use principles for judging and improving CLI command surfaces: command shape, overloaded flags, task flows, config models, help text, errors, output formats, shell completion, automation ergonomics, and agent-callable interfaces. Use when a CLI has become a parameter grab bag or needs a clearer progressive-disclosure design; includes a small safety floor for side-effecting commands as a secondary guardrail.
 ---
 
 # CLI Surface Audit
