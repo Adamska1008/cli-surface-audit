@@ -1,6 +1,6 @@
 ---
 name: cli-surface-audit
-description: Use principles for judging and improving CLI command surfaces: command shape, overloaded flags, task flows, config models, help text, errors, output formats, shell completion, automation ergonomics, and agent-callable interfaces. Use when a CLI has become a parameter grab bag or needs a clearer progressive-disclosure design; includes a small safety floor for side-effecting commands as a secondary guardrail.
+description: Use principles for broad or focused review of CLI command surfaces: command shape, overloaded flags, task flows, config models, help text, errors, output formats, shell completion, automation ergonomics, and agent-callable interfaces. Use when a CLI has become a parameter grab bag or needs a clearer progressive-disclosure design; includes a small safety floor for side-effecting commands as a secondary guardrail.
 ---
 
 # CLI Surface Audit
@@ -21,6 +21,12 @@ Use this as a taste guide, not a script. A good CLI surface makes common work ob
 - Evolvable surface: better names and shapes can be introduced with aliases, deprecations, and migration notes instead of needless breakage.
 - Agent affordance: safe read-only commands are easy to discover, side-effecting commands are hard to call accidentally, and plan/validate outputs are deterministic.
 
+## Focus
+
+Honor an explicit focus from the user, such as flags, config, help text, errors, output contract, automation, safety, naming, onboarding, migration, or a specific command group. Treat the focus as a lens, not a fixed checklist. Go deep on that concern while still noting adjacent issues that materially affect it.
+
+If no focus is given, judge the whole CLI surface. If the focus is ambiguous, state the assumption briefly and proceed.
+
 ## Judgment
 
 When reviewing or redesigning, reason from the CLI's real domain. Ask:
@@ -33,7 +39,9 @@ When reviewing or redesigning, reason from the CLI's real domain. Ask:
 - Where would a first-time user get stuck, and where would a power user need more control?
 - What small compatible change would remove the most cognitive load?
 
-Use tables, examples, or proposed command sketches only when they clarify the judgment. Prefer a few sharp recommendations over a long checklist.
+When reporting back, provide a detailed, evidence-backed assessment rather than a terse verdict. Let the report shape follow the CLI and the user's question, but include enough context, examples, tradeoffs, and reasoning for the user to understand why the surface feels good or bad and what direction would improve it.
+
+Use tables, examples, or proposed command sketches only when they clarify the judgment. Prefer a deep treatment of the important issues over a broad but shallow checklist.
 
 ## Smells
 
